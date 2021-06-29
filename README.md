@@ -18,11 +18,16 @@ Nodejs Authentication with JWT Example
 - Install with npm
 
 ```bash
+  cd nodejs-jwt-example
   npm install
-  cd my-project
 ```
 
-- Rename .env.example to .env and fill the environment variables
+- Rename .env.example to .env and fill the environment variables. Example:
+
+```javascript
+  JWT_SECRET_KEY="JWT_SECRET_KEY"
+  PORT=5000
+```
 
 - Run the sever
 
