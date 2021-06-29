@@ -7,7 +7,7 @@ Nodejs Authentication with JWT Example
 
 - [ ] Better Status Codes
 - [ ] Better Responses
-- [ ] Authentication Middleware
+- [x] Authentication Middleware
 - [ ] Comments
 - [ ] Tests
 
