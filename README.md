@@ -82,14 +82,14 @@ Login a user, returns id, username and token
 ### Protected route
 
 ```http
-  POST /api/v1/user/protected
+  GET /api/v1/user/protected
 ```
 
 Protected route for logged in users, return logged user data and a message
 
-| Body   | Type     | Description              |
-| :----- | :------- | :----------------------- |
-| `Token`| `string` | **Required**. Valid token|
+| Headers         | Type     | Description                                             | Example          |
+| :-------------- | :------- | :------------------------------------------------------ | :--------------- |
+| `Authentication`| `string` | **Required**. Valid token preceded by the word 'Bearer' | `Bearer <token>` |
   
 ## Author
 

@@ -56,14 +56,10 @@ async function login(req, res) {
 }
 
 function protectedRoute(req, res) {
-  const token = req.body.token;
-  const data = validateToken(token);
-
-  if (data.error) {
-    res.status(401).json(data);
-  }
-
-  data['message'] = 'Congratulations! You are logged in.';
+  const data = {
+    ...req.user,
+    message: 'Congratulations! You successfully logged in :D',
+  };
   res.json(data);
 }
 

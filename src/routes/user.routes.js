@@ -7,12 +7,13 @@ const {
   getUserById,
   protectedRoute,
 } = require('../controllers/user.controller');
+const { protect } = require('../middleware/authentication');
 
 const router = Router();
 
 router.route('/login').post(login);
 router.route('/register').post(addUser);
-router.route('/protected').post(protectedRoute);
+router.route('/protected').get(protect, protectedRoute);
 router.route('/:id').get(getUserById);
 router.route('/').get(getUsers);
 
